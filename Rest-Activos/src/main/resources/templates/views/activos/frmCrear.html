@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thyleaf.org">
+
+<head th:replace="plantilla/template :: head">
+
+</head>
+
+<body>
+	<header th:replace="plantilla/template :: header"></header>
+	<div class="container">
+		<div class="card bg-light">
+			<div class="card-header bg-dark text-white" th:text="${titulo}"></div>
+				<div class="card-body">
+					<form th:object="${activos}" th:action="@{/views/activos/save}" method="post">
+						<div class="form-group row">
+							<input type="hidden" th:field="*{idserial}" />
+							<label class="col-md-2" for="depre">Depreciacion Compra</label>
+							<input type="text" th:field="*{depreciacionCompra}" class="form-control form-control-sm col-md-6" id="depre"
+								placeholder="Depreciación" required>
+							<small></small>
+						</div>
+						<div class="form-group row">
+							<label class="col-md-2" for="nameE">Nombre del equipo</label>
+							<input type="text" th:field="*{equipo_name}" class="form-control form-control-sm col-md-6" id="nameE"
+								placeholder="Nombre del equipo" required>
+							<small></small>
+						</div>
+						<div class="form-group row">
+							<label class="col-md-2" for="fecha">Fecha de Compra</label>
+							<input type="date" th:field="*{fecha_compra}" class="form-control form-control-sm col-md-6" id="fecha"
+								placeholder="Fecha de Compra" required>
+							<small></small>
+						</div>
+						<div class="form-group row">
+							<label class="col-md-2" for="valor">valor de Compra</label>
+							<input type="text" th:field="*{valor_compra}" class="form-control form-control-sm col-md-6" id="valor"
+								placeholder="Valor de Compra" required>
+							<small></small>
+						</div>
+						<div class="form-group row">
+							<label class="col-md-2" for="des">Descripción</label>
+							<input type="text" th:field="*{descripcion}" class="form-control form-control-sm col-md-6" id="des"
+								placeholder="Descripción" required>
+							<small></small>
+						</div>
+	
+						<div class="card-footer bg-dark">
+							<input type="submit" class="btn btn-primary btn-sm" value="Guardar" />
+						</div>
+						
+					</form>
+				</div>
+			
+		</div>
+	</div>
+	
+	<footer th:replace="plantilla/template :: footer"></footer>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Clientes</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+</head>
+<body>
+	<!--BARRA DE NAVEGACION -->
+	<header th:fragment="header">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<div class="container">
+				<a class="navbar-brand" href="#"><strong>Practica</strong></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<!-- Enlaces -->
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto">
+						
+						<li class="nav-item">
+							<a class="nav-link" th:href="@{/views/activos/}">Activos</a>
+						</li>
+		
+						</li>
+		
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+    <!--CONTENIDO -->
+    <div class="container">
+    </div>
+    <!--PIE DE PAGINA -->
+    <footer th:fragment="footer" class="bg-dark text-white text-center fixed-bottom">
+    	<div class="container">
+    		<p>Activos</p>
+    	</div>
+    	<script types="text/javascript" th:src"@{/js/jquery-3.3.1.slim.min.js}">
+    	</script>
+    	<script types="text/javascript" th:src"@{/js/popper.min.js}">
+    	</script>
+    	<script types="text/javascript" th:src"@{/js/bootstrap.min.js}">
+    	</script>
+    </footer>
+	<script></script>
+</body>
+</html>
